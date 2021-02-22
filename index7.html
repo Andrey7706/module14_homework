@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работа с HTTP</title>
+</head>
+<style>
+    .wrapper {
+        max-width: 500px;
+        width: 100%;
+        background-color:#cccccc;
+        padding: 50px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin: 50px auto;
+        font-family: Roboto, sans-serif;
+    }
+    .btn {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        box-shadow: none;
+        cursor: pointer;
+        margin: 5px 10px;
+        padding: 10px 15px;
+        border-radius: 1px;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: white;
+        background: #315efb;
+        transition: 0.3s;
+    }
+      
+    .btn:hover {
+        box-shadow: 0px 2px 8px 2px rgba(141,150,178,.3);
+        transform: scale(1.05);
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    .result {
+        margin-top: 20px;
+    }
+
+    .result-ul {
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 10px 25px;
+        background: #fff;
+    }
+
+    .line-trought.active {
+        text-decoration: line-through;
+    }
+
+    .result ul li {
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+    
+    <div class="wrapper">
+        <h1>Список задач</h1>
+        <input class="input j-input" type="number" value="">
+        <button class="btn j-btn">Получить список задач</button>
+   
+        <div class="result">
+        
+        </div>
+    </h1>
+        
+    <script src="7.js"></script>
+</body>
+</html>

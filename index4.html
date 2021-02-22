@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML</title>
+    <style>
+        .cocontainer {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color:gainsboro;
+            border-radius: 10px;
+            box-sizing: border-box;
+            box-shadow: 3px 3px 3px rgba(163, 126, 126, 0.3);
+            font-family: "Open Sans", sans-serif;
+            font-size: 15px;
+        }
+
+        .choice {
+            display: flex;
+            align-items: center;
+        }
+
+        .select {
+            width: 100px;
+        }
+
+        .btn {
+            max-width: 200px;
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color:dodgerblue;
+            border-radius: 3px;
+            transition: 0.2s;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            border: none;
+            outline: none;
+            margin-left: 20px;
+            padding: 5px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color:rgb(14, 132, 250);
+            box-shadow: 3px 3px 3px rgba(163, 126, 126, 0.3);
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        table {
+            width: 400px;
+            border: 1px solid grey; 
+            border-collapse: collapse;
+
+        }
+
+        th, td {
+            border: 1px solid grey;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="cocontainer">
+        <div class="choice">
+            <select id="select">
+                <option value="2017">2017</option>
+                <option value="2018">2018</option>
+            </select>
+            <button class="btn j-btn-request">Загрузить отчет</button>
+        </div>
+        <div class="result j-result">Здесь будет результат запроса</div>
+        <div class="j-link">Здесь будет ссылка на чарт</div>
+    </div>
+
+    <script src="4.js"></script>
+</body>
+</html>
