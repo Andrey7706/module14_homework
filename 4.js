@@ -64,6 +64,9 @@ function useRequest(url, callback) {
                     <td>${item.sales.q4}</td>
                 </tr>
             </table>
+            <div class="link">
+              <a target="_balnk" href="https://quickchart.io/chart?c={type:'bar',data:{labels:['Кв.1','Кв.2','Кв.3','Кв.4'], datasets:[{label:'Выручка за ${value} год',data:[${item.sales.q1, item.sales.q2, item.sales.q3, item.sales.q4}]}]}}">Quickchart.io</a>
+            </div>
           `;
           cards = cards + cardBlock;
         }
@@ -72,7 +75,6 @@ function useRequest(url, callback) {
     console.log('end cards', cards);
       
     resultNode.innerHTML = cards;
-    resultLink.innerHTML = `<a href="https://quickchart.io/chart?c={type:'bar',data:{labels:['Кв.1','Кв.2','Кв.3','Кв.4'], datasets:[{label:'Выручка за ${item.year} год',data:[${item.sales.q1, item.sales.q2, item.sales.q3, item.sales.q4}]}]}}">Quickchart.io</a>`
   }
   
   // Вешаем обработчик на кнопку для запроса

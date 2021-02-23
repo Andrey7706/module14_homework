@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Работа с HTTP</title>
+    <title>Document</title>
 </head>
 <style>
     .wrapper {
@@ -56,27 +56,34 @@
         background: #fff;
     }
 
-    .line-trought.active {
-        text-decoration: line-through;
+    .result-link {
+        margin-bottom: 10px;
+        text-decoration: none;
+        transition: 0.3s;
+        border-bottom: 1px solid transparent;
+        color: #315efb;
+        display: inline-block;
     }
 
-    .result ul li {
-        margin-bottom: 10px;
+    .result-link:hover {
+        border-bottom-color: #315efb;
     }
 </style>
 <body>
     
     <div class="wrapper">
         <h1>Список задач</h1>
-        <input class="input j-input" type="number" value="">
-        <button class="btn j-btn">Получить список задач</button>
+        <input class="input j-input-number" type="text" value="" placeholder="Введите число от 1 до 10">
+        <input class="input j-input-limit" type="text" value="" placeholder="Введите число от 1 до 10">
+        <button class="btn j-btn">Запрос</button>
    
         <div class="result">
         
         </div>
 
     </div>
-        
-    <script src="7.js"></script>
+
+    <script src="8.js"></script>
+
 </body>
 </html>

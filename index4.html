@@ -68,6 +68,19 @@
             padding: 10px;
             text-align: center;
         }
+
+        .link a {
+            margin-top: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+            border-bottom: 1px solid transparent;
+            color: #315efb;
+            display: inline-block;
+        }
+
+        .link a:hover {
+            border-bottom-color: #315efb;
+        }
     </style>
 </head>
 <body>
@@ -79,8 +92,7 @@
             </select>
             <button class="btn j-btn-request">Загрузить отчет</button>
         </div>
-        <div class="result j-result">Здесь будет результат запроса</div>
-        <div class="j-link">Здесь будет ссылка на чарт</div>
+        <div class="result j-result">Здесь будет результат запроса и ссылка на чарт</div>
     </div>
 
     <script src="4.js"></script>
