@@ -12,10 +12,11 @@
 */
 
 const btn = document.querySelector('.j-btn');
-const resultContent = document.querySelector('.result');
+const resultContent = document.querySelector('.result ul');
 
 btn.addEventListener('click', () => {
     const input = document.querySelector('.j-input').value;
+    let resultValue = '';
     fetch(`https://jsonplaceholder.typicode.com/users/${input}/todos`)
     .then((response) => {
         console.log('response', response);
@@ -27,14 +28,13 @@ btn.addEventListener('click', () => {
     .then((data) => {
         if (data.length !== 0) {
             console.log(data); 
-            resultContent.innerHTML = '';
+            
             data.forEach(item => {
-                let resultValue = `<ul class="result-ul">
-                    <li><b>id пользователя:</b><br> <span>${item.userId}</span></li>
-                    <li class="completed"><b>выполнение задачи:</b><br> <span>${item.completed}</span></li>
-                    <li class="line-trought"><b>Описание задачи:</b><br> <span>${item.title}</span></li>
-                    <li><b>id задачи:</b><br> <span>${item.id}</span></li>
-                </ul>`;
+                if(item.completed === true) {
+                    resultValue = `<del><li><b>Описание задачи:</b><br> <span>${item.title}</span></li></del>`;
+                } else {
+                    resultValue = `<li><b>Описание задачи:</b><br> <span>${item.title}</span></li>`;
+                }
                 resultContent.innerHTML += resultValue;
             });
         } 

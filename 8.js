@@ -23,6 +23,7 @@ const btn = document.querySelector('.j-btn');
 const resultContent = document.querySelector('.result');
 
 btn.addEventListener('click', () => {
+    const myResult = localStorage.getItem('myKey');
     const inputNumber = document.querySelector('.j-input-number').value;
     const inputLimit = document.querySelector('.j-input-limit').value;
 
@@ -36,10 +37,9 @@ btn.addEventListener('click', () => {
         fetch(`https://picsum.photos/v2/list?page=${inputNumber}&limit=${inputLimit}`)
         .then((response) => {
             console.log('response', response);
-    
             const result = response.json();
-            console.log('result', result);
             return result;
+            localStorage.setItem('myKey', result);
         })
         .then((data) => {
             if (data.length !== 0) {
@@ -61,3 +61,6 @@ btn.addEventListener('click', () => {
         })
     }
 })
+
+
+// по ключам localStorage не сделал подзадачу.
